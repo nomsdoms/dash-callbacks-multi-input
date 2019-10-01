@@ -6,12 +6,12 @@ from dash.dependencies import Input, Output, State
 
 ########### Define your variables ######
 
-myheading1='How to use callbacks with multiple inputs'
-tabtitle = 'lightsabers!'
-list_of_colors=['red', 'green', 'blue']
-list_of_numbers=['one', 'two', 'three']
+myheading1='Potential 2019 World Series Matchup'
+tabtitle = "Let's be real. The Astros are winning it all."
+list_of_al=['astros', 'as', 'rays', 'yankees', 'twins']
+list_of_nl=['dodgers', 'nationals', 'brewers', 'braves', 'cardinals']
 sourceurl = 'https://dash.plot.ly/getting-started-part-2'
-githublink = 'https://github.com/austinlasseter/dash-callbacks-multi-input'
+githublink = 'https://github.com/nomsdoms/dash-callbacks-multi-input'
 
 
 ########## Set up the chart
@@ -31,9 +31,9 @@ app.layout = html.Div(children=[
             dcc.RadioItems(
                 id='pick-a-color',
                 options=[
-                        {'label':list_of_colors[0], 'value':list_of_colors[0]},
-                        {'label':list_of_colors[1], 'value':list_of_colors[1]},
-                        {'label':list_of_colors[2], 'value':list_of_colors[2]},
+                        {'label':list_of_al[0], 'value':list_of_al[0]},
+                        {'label':list_of_al[1], 'value':list_of_al[1]},
+                        {'label':list_of_al[2], 'value':list_of_al[2]},
                         ],
                 value='choose',
                 ),
@@ -42,11 +42,11 @@ app.layout = html.Div(children=[
             dcc.RadioItems(
                 id='pick-a-number',
                 options=[
-                        {'label':list_of_numbers[0], 'value':list_of_numbers[0]},
-                        {'label':list_of_numbers[1], 'value':list_of_numbers[1]},
-                        {'label':list_of_numbers[2], 'value':list_of_numbers[2]},
+                        {'label':list_of_nl[0], 'value':list_of_nl[0]},
+                        {'label':list_of_nl[1], 'value':list_of_nl[1]},
+                        {'label':list_of_nl[2], 'value':list_of_nl[2]},
                         ],
-                value='one',
+                value='choose',
                 ),
         ],className='two columns'),
         html.Div([
