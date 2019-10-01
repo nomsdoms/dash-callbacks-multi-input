@@ -37,7 +37,7 @@ app.layout = html.Div(children=[
                         {'label':list_of_al[3], 'value':list_of_al[3]},
                         {'label':list_of_al[4], 'value':list_of_al[4]},
                         ],
-                value='choose',
+                value='astros',
                 ),
         ],className='two columns'),
         html.Div([
