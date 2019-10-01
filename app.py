@@ -7,7 +7,7 @@ from dash.dependencies import Input, Output, State
 ########### Define your variables ######
 
 myheading1='Potential 2019 World Series Matchup'
-tabtitle = "Let's be real. The Astros are winning it all."
+tabtitle = "WS 2019"
 list_of_al=['astros', 'as', 'rays', 'yankees', 'twins']
 list_of_nl=['dodgers', 'nationals', 'brewers', 'braves', 'cardinals']
 sourceurl = 'https://dash.plot.ly/getting-started-part-2'
@@ -34,6 +34,8 @@ app.layout = html.Div(children=[
                         {'label':list_of_al[0], 'value':list_of_al[0]},
                         {'label':list_of_al[1], 'value':list_of_al[1]},
                         {'label':list_of_al[2], 'value':list_of_al[2]},
+                        {'label':list_of_al[3], 'value':list_of_al[3]},
+                        {'label':list_of_al[4], 'value':list_of_al[4]},
                         ],
                 value='choose',
                 ),
@@ -45,6 +47,8 @@ app.layout = html.Div(children=[
                         {'label':list_of_nl[0], 'value':list_of_nl[0]},
                         {'label':list_of_nl[1], 'value':list_of_nl[1]},
                         {'label':list_of_nl[2], 'value':list_of_nl[2]},
+                        {'label':list_of_nl[3], 'value':list_of_nl[3]},
+                        {'label':list_of_nl[4], 'value':list_of_nl[4]},
                         ],
                 value='choose',
                 ),
@@ -67,7 +71,7 @@ app.layout = html.Div(children=[
                Input('pick-a-number', 'value')])
 def radio_results(color_you_picked, number_you_picked):
     image_you_chose=f'{color_you_picked}-{number_you_picked}.jpg'
-    return html.Img(src=app.get_asset_url(image_you_chose), style={'width': 'auto', 'height': 'auto'}),
+    return html.Img(src=app.get_asset_url(image_you_chose), style={'width': '25%', 'height': '25%'}),
 
 ############ Deploy
 if __name__ == '__main__':
